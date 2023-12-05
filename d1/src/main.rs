@@ -33,7 +33,7 @@ fn main() {
     let mut part2_sum = 0;
     for line in reader.lines().map(|line| line.unwrap()) {
         let mut digits: Vec<_> = digit_strings.iter()
-            .map(|s| (line.match_indices(s), *digit_map.get(s).unwrap() as u32))
+            .map(|s| (line.match_indices(s), *digit_map.get(s).unwrap()))
             .flat_map(|(i, e)| i.map(move |ii| (ii, e)))
             .collect();
         digits.extend(

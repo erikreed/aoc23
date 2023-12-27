@@ -53,8 +53,8 @@ fn is_valid(values: &Vec<Value>, combos: &Vec<u32>,
 }
 
 fn main() -> Result<(), Box<dyn Error>> {
-    let reader = BufReader::new(File::open("d12.txt")?);
-    let lines = reader.lines().collect::<Vec<_>>();
+`    let reader = BufReader::new(File::open("d12.txt")?);
+`    let lines = reader.lines().collect::<Vec<_>>();
     let part1_sum: u64 = lines
         .par_iter()
         .progress_count(lines.len() as u64)
